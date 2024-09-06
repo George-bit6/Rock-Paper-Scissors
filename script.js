@@ -1,23 +1,26 @@
-function getComputerChoice (choiceAI) {
+function getComputerChoice () {
     
+    let choiceBot;
     let i = Math.floor(Math.random() * 3)
     switch (i) {
 
         case 0:
-            choiceAI = "rock";
+            choiceBot = "rock";
             break;
         case 1:
-            choiceAI = "paper"
+            choiceBot = "paper"
             break;
         case 2:
-            choiceAI = "scissors"
+            choiceBot = "scissors"
             break;
     }
-    return choiceAI;
+    console.log(choiceBot)
+    return choiceBot;
 }
 
-function getHumanChoice (choicehuman) {
+function getHumanChoice () {
 
+    let choicehuman;
     choicehuman = prompt("Choose Rock, Paper or Scissors")
     choicehuman = choicehuman.toLowerCase()
 
@@ -27,8 +30,22 @@ function getHumanChoice (choicehuman) {
 
 }
 
-let a;
+let HumanScore = ComputerScore = 0;
+let H = getHumanChoice ();
+let C = getComputerChoice ();
 
-getHumanChoice(a);
+console.log(C);
+console.log(H);
+
+if (H === C){
+
+    console.log("It is a tie");
+} else if ((H === "rock" && C === "paper") || (H === "paper" && C === "scissors") || (H === "scissors" && C === "rock")) {
+
+    console.log(`You Lose! ${C} beats ${H}`)
+} else if ((C === "rock" && H === "paper") || (C === "paper" && H === "scissors") || (C === "scissors" && H === "rock")) {
+
+    console.log(`You Win! ${H} beats ${C}`)
+}
 
 
