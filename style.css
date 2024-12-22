@@ -1,0 +1,62 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+body{
+
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+}
+
+#choice {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 50vh;
+
+}
+
+button{
+
+    color: white;
+    background-color: black;
+    margin: 24px;
+    height: 30px;
+    width: 200px;
+    padding: 0;
+    border: 0;
+
+
+}
+
+.images{
+
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+#resultContainer{
+
+    margin: auto;
+    height: 40vh;
+
+}
+
+#resultText{
+
+    background-color: white;
+    white-space: pre;
+    border-color: black;
+    
+}
